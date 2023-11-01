@@ -30,7 +30,7 @@ export async function POST(req: Request, res: NextResponse) {
     return NextResponse.json({ output: theResponse }, { status: 200 });
   } catch (error) {
     // Log the error for debugging
-    console.error("Error encountered:", error.message);
+    console.error("Error encountered:", error);
 
     // Send a generic error message to the client
     return NextResponse.json({ error: "Server error" }, { status: 500 });
